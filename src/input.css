@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+    /* Light mode */
+    --color-background: #f3f3f3;
+    --color-primary: #2563eb;
+    --color-primary-active: #1d4ed8;
+    --color-card-light: #e2e8f0;
+    --color-card: #ffffff;
+    --color-text-muted: #64748b;
+    --color-text-light: #f9f9f9;
+    --color-background-marquee: #f1f5f9;
+    --color-border-light: #d0d4db;
+    --color-background-dark: #0f172a;
+    --color-card-dark: #212c3f;
+    --color-text-dark: #90a0b6;
+    --color-input-light: #f5f5f5;
+
+    --animate-marquee: marquee 15s linear infinite;
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(60%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+
+@layer components {
+    .active {
+        @apply bg-primary text-text-light font-bold;
+    }
+
+    .active:hover {
+        @apply hover:text-text-light!;
+    }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));

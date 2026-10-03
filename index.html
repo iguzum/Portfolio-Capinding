@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="en" id="html" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="src/output.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/pictures/icon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/pictures/icon/favicon-16x16.png" />
+        <link rel="apple-touch-icon" href="assets/pictures/icon/apple-touch-icon.png" />
+        <title>Portfolio | Capinding</title>
+    </head>
+    <body class="font-[Poppins] min-h-dvh w-full bg-background dark:bg-background-dark text-text-muted transition-colors duration-500">
+        <div class="mx-auto min-h-dvh w-full max-w-360 px-4 sm:px-6 lg:px-20 relative">
+            <button
+                id="hamburgerBtn"
+                class="flex justify-center items-center px-3 py-2 dark:text-text-light dark:bg-card-dark rounded-lg border border-border-light lg:hidden sticky top-5 left-full bg-background"
+            >
+                <i class="ri-menu-line text-xl"></i>
+            </button>
+            <nav
+                id="navbar"
+                class="fixed flex flex-col dark:bg-card-dark top-0 min-w-40 lg:min-w-full lg:flex-row right-0 translate-x-full lg:translate-x-0 h-screen lg:h-auto lg:sticky lg:top-5 z-1000 items-center gap-5 lg:gap-1 lg:justify-between lg:rounded-full border border-border-light bg-background lg:px-3 py-5 lg:py-2 transition-all duration-200"
+            >
+                <button
+                    id="backBtn"
+                    class="absolute flex justify-center items-center px-3 py-2 rounded-lg border border-border-light lg:hidden top-5 right-5 bg-background dark:text-text-light dark:bg-card-dark"
+                >
+                    <i class="ri-close-large-fill text-xl"></i>
+                </button>
+
+                <a
+                    href="#home"
+                    class="md:text-lg cursor-pointer pl-6 font-bold text-primary hover:text-text-dark transition-all duration-200 mt-17 lg:mt-0"
+                    >Mark Jay</a
+                >
+
+                <div class="flex lg:w-fit items-center gap-1 lg:gap-1 flex-col lg:flex-row px-5 lg:px-0 lg:mt-0">
+                    <a
+                        href="#home"
+                        class="nav-link lg:rounded-full px-4 py-1 transition-all duration-200 hover:text-text-dark aria-[current=page]:bg-primary aria-[current=page]:text-text-light w-full h-10 flex justify-start gap-3 items-center rounded-lg lg:w-fit lg:h-auto"
+                    >
+                        <i class="ri-home-2-line text-xl lg:hidden"></i>
+                        Home
+                    </a>
+
+                    <a
+                        href="#about"
+                        class="nav-link lg:rounded-full px-4 py-1 transition-all duration-200 hover:text-text-dark aria-[current=page]:bg-primary aria-[current=page]:text-text-light w-full h-10 flex justify-start gap-3 items-center rounded-lg lg:w-fit lg:h-auto"
+                    >
+                        <i class="ri-user-line text-xl lg:hidden"></i>
+                        About
+                    </a>
+
+                    <a
+                        href="#services"
+                        class="nav-link lg:rounded-full px-4 py-1 transition-all duration-200 hover:text-text-dark aria-[current=page]:bg-primary aria-[current=page]:text-text-light w-full h-10 flex justify-start gap-3 items-center rounded-lg lg:w-fit lg:h-auto"
+                    >
+                        <i class="ri-service-line text-xl lg:hidden"></i>
+                        Services
+                    </a>
+
+                    <a
+                        href="#projects"
+                        class="nav-link lg:rounded-full px-4 py-1 transition-all duration-200 hover:text-text-dark aria-[current=page]:bg-primary aria-[current=page]:text-text-light w-full h-10 flex justify-start gap-3 items-center rounded-lg lg:w-fit lg:h-auto"
+                    >
+                        <i class="ri-draft-line text-xl lg:hidden"></i>
+                        Projects
+                    </a>
+
+                    <a
+                        href="#tools"
+                        class="nav-link lg:rounded-full px-4 py-1 transition-all duration-200 hover:text-text-dark aria-[current=page]:bg-primary aria-[current=page]:text-text-light w-full h-10 flex justify-start gap-3 items-center rounded-lg lg:w-fit lg:h-auto"
+                    >
+                        <i class="ri-code-s-slash-line text-xl lg:hidden"></i>
+                        Tools
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="nav-link lg:rounded-full px-4 py-1 transition-all duration-200 hover:text-text-dark aria-[current=page]:bg-primary aria-[current=page]:text-text-light w-full h-10 flex justify-start gap-3 items-center rounded-lg lg:w-fit lg:h-auto"
+                    >
+                        <i class="ri-phone-line text-xl lg:hidden"></i>
+                        Contact
+                    </a>
+
+                    <button
+                        id="btnDarkMode"
+                        class="border-2 flex ml-5 hover:text-primary hover:border-primary transition-all duration-200 justify-center items-center border-border-light w-10 h-10 rounded-full cursor-pointer mt-4 lg:mt-0"
+                    >
+                        <i class="ri-moon-line md:text-xl"></i>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- HOME SECTION START -->
+            <section
+                id="home"
+                class="flex flex-col items-center justify-center dark:text-text-dark gap-10 px-3 lg:flex-row lg:gap-20 pt-5 md:pt-30 lg:pt-40"
+            >
+                <div class="flex w-full max-w-none flex-col items-start lg:max-w-[60%]">
+                    <span class="text-md md:text-lg lg:text-xl flex justify-center items-end gap-1"
+                        >Hello I'm
+
+                        <img src="assets/pictures/wave.gif" alt="waving hand" class="w-full h-auto max-w-8 md:max-w-9 lg:max-w-10" />
+                    </span>
+                    <h1
+                        class="mt-3 bg-linear-to-b from-primary to-primary/60 bg-clip-text text-4xl font-bold text-transparent md:text-5xl lg:text-6xl"
+                    >
+                        Mark Jay
+                    </h1>
+
+                    <span class="text-md md:text-lg lg:text-xl mt-3 text-justify">Web Developer | Student</span>
+
+                    <p class="text-justify mt-7">
+                        I’m a student and aspiring web developer passionate about creating clean, functional, and user-friendly websites while
+                        continuously learning and improving my skills.
+                    </p>
+
+                    <div class="mt-7 flex w-full justify-between items-center gap-5 flex-wrap">
+                        <a
+                            href="#projects"
+                            class="hover:bg-primary-active transition-all duration-200 cursor-pointer flex-1 text-sm md:text-md lg:text-lg py-3 rounded-full bg-primary text-text-light flex justify-center items-center"
+                        >
+                            View Projects <i class="ri-arrow-right-line pl-2"></i>
+                        </a>
+                        <a
+                            href="#contact"
+                            class="hover:bg-primary hover:text-text-light transition-all duration-200 cursor-pointer flex-1 text-sm md:text-lg lg:text-lg py-3 rounded-full bg-background border-2 border-primary text-primary flex justify-center items-center"
+                        >
+                            Contact Me <i class="ri-phone-line pl-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- MY IMAGE CONTAINER -->
+                <div class="flex w-full justify-center">
+                    <div class="w-[80%] overflow-hidden rounded-xl md:w-[75%] lg:w-100">
+                        <img src="assets/pictures/me.jpg" alt="My Picture" class="block h-auto w-full object-cover" />
+                    </div>
+                </div>
+            </section>
+            <!-- HOME SECTION END -->
+
+            <!-- ABOUT SECTION START -->
+            <section id="about" class="dark:text-text-dark mt-30 flex flex-col gap-12 px-3 scroll-mt-40 lg:mt-45 lg:flex-row lg:gap-25">
+                <div class="flex w-full flex-col lg:max-w-[50%]">
+                    <span class="text-primary font-bold text-lg">01. ABOUT ME</span>
+                    <h1 class="text-3xl lg:text-6xl font-bold mt-3 dark:text-text-light">A Passionate Web Developer</h1>
+
+                    <p class="text-justify mt-7">
+                        I'm Mark Jay, a BSIT student with a passion for building clean and functional web applications. I enjoy learning new
+                        technologies, solving problems, and creating user-friendly designs.
+                    </p>
+
+                    <div class="mt-7 flex lg:justify-between items-start gap-5 flex-wrap flex-col md:flex-row">
+                        <span class="flex items-center gap-2"><i class="ri-map-pin-2-line text-lg text-primary"></i>Philippines</span>
+                        <span class="flex items-center gap-2"><i class="ri-book-line text-lg text-primary"></i>BSIT (in progress)</span>
+                        <span class="flex items-center gap-2"><i class="ri-code-s-slash-line text-lg text-primary"></i>Web Developer</span>
+                    </div>
+                </div>
+
+                <div class="flex w-full flex-col justify-center gap-3 lg:max-w-[50%]">
+                    <div class="flex items-start gap-3 mb-3">
+                        <i class="ri-book-line text-lg lg:text-2xl text-primary"></i>
+
+                        <p class="text-justify">
+                            Currently pursuing a Bachelor of Science in Information Technology (BSIT) at the Univerdad de Dagupan, majoring in Web and
+                            Mobile Application Development.
+                        </p>
+                    </div>
+                    <div class="flex items-start gap-3 mb-3">
+                        <i class="ri-target-fill text-lg lg:text-2xl text-primary"></i>
+                        <p class="text-justify">
+                            Enthusiastic web developer who loves developing web applications with a strong interest in creating user-centered and
+                            responsive web applications using modern day web technology.
+                        </p>
+                    </div>
+                    <div class="flex items-start gap-3 mb-3">
+                        <i class="ri-cpu-line text-lg lg:text-2xl text-primary"></i>
+                        <p class="text-justify">
+                            I have basic knowledge in web development with languages like HTML, CSS, Tailwind CSS, JavaScript, PHP, and MySQL.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- ABOUT SECTION END -->
+
+            <!-- SERVICES SECTION START -->
+            <section id="services" class="dark:text-text-dark mt-30 flex flex-col gap-10 px-3 scroll-mt-40 lg:mt-45">
+                <div class="flex flex-col lg:max-w-[40%]">
+                    <span class="text-primary font-bold text-lg">02. SERVICES</span>
+                    <h1 class="text-3xl lg:text-6xl font-bold mt-3 dark:text-text-light">What I Offer</h1>
+
+                    <p class="mt-4 max-w-2xl text-justify">
+                        I provide web development services, creating responsive and user-friendly websites and applications.
+                    </p>
+                </div>
+
+                <!-- GRID -->
+                <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-10 text-text-muted">
+                    <div
+                        class="flex flex-col gap-3 p-5 border border-border-light rounded-2xl hover:shadow-lg tranform hover:-translate-y-2 transition-all duration-200 bg-card dark:bg-card-dark"
+                    >
+                        <span class="text-primary font-bold text-lg bg-card-light rounded-2xl flex justify-around items-center w-12 h-12"
+                            ><i class="ri-code-s-slash-line text-2xl"></i>
+                        </span>
+
+                        <h1 class="text-2xl lg:text-xl font-bold mt-2 dark:text-text-light">Web Development</h1>
+
+                        <p class="text-justify mt-4">
+                            I specialize in building responsive and user-friendly websites and web applications using HTML, CSS, JavaScript, and PHP.
+                        </p>
+                    </div>
+
+                    <div
+                        class="flex flex-col gap-3 p-5 border border-border-light rounded-2xl hover:shadow-lg tranform hover:-translate-y-2 transition-all duration-200 bg-card dark:bg-card-dark"
+                    >
+                        <span class="text-primary font-bold text-lg bg-card-light rounded-2xl flex justify-around items-center w-12 h-12"
+                            ><i class="ri-brush-line text-2xl"></i>
+                        </span>
+
+                        <h1 class="text-2xl lg:text-xl font-bold mt-2 dark:text-text-light">UI/UX Design</h1>
+
+                        <p class="text-justify mt-4">
+                            I specialize in creating visually appealing and user-friendly interfaces that provide an excellent user experience.
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col gap-3 p-5 border border-border-light rounded-2xl hover:shadow-lg tranform hover:-translate-y-2 transition-all duration-200 bg-card dark:bg-card-dark"
+                    >
+                        <span class="text-primary font-bold text-lg bg-card-light rounded-2xl flex justify-around items-center w-12 h-12"
+                            ><i class="ri-settings-2-line text-2xl"></i>
+                        </span>
+
+                        <h1 class="text-2xl lg:text-xl font-bold mt-2 dark:text-text-light">Website Maintenance</h1>
+
+                        <p class="text-justify mt-4">
+                            I specialize in maintaining and updating existing websites to ensure they remain functional, secure, and up-to-date.
+                        </p>
+                    </div>
+                    <div
+                        class="flex flex-col gap-3 p-5 border border-border-light rounded-2xl hover:shadow-lg tranform hover:-translate-y-2 transition-all duration-200 bg-card dark:bg-card-dark"
+                    >
+                        <span class="text-primary font-bold text-lg bg-card-light rounded-2xl flex justify-around items-center w-12 h-12"
+                            ><i class="ri-macbook-line text-2xl"></i>
+                        </span>
+
+                        <h1 class="text-2xl lg:text-xl font-bold mt-2 dark:text-text-light">Custom Solutions</h1>
+
+                        <p class="text-justify mt-4">I specialize in creating custom web solutions based on your specific needs and requirements.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECTS SECTION START -->
+            <section id="projects" class="dark:text-text-dark mt-30 scroll-mt-30 flex flex-col gap-10 px-3">
+                <div class="flex flex-col">
+                    <span class="text-primary font-bold text-lg">03. PROJECTS</span>
+                    <h1 class="text-3xl lg:text-6xl font-bold mt-3 dark:text-text-light">My Work</h1>
+
+                    <p class="text-justify mt-4 lg:max-w-[40%]">
+                        Here are some of the projects I’ve worked on, showcasing my web development and design skills.
+                    </p>
+
+                    <a href="pages/projects.html" class="flex justify-start items-center mt-7 text-primary hover:underline hover:text-primary-active">
+                        View All Projects <i class="ri-arrow-right-s-line text-md"></i>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <a
+                        href="https://iguzum.itch.io/zero-g-space-duel-warfare"
+                        class="p-4 flex flex-col gap-3 bg-card border border-border-light rounded-2xl transform hover:-translate-y-2 transition-all duration-200 hover:shadow-lg dark:border-border-light dark:bg-card-dark relative"
+                    >
+                        <div class="flex h-56 items-center justify-center overflow-hidden rounded-md">
+                            <img src="assets/pictures/mockups/zero_g.jpg" alt="Project 1" class="h-full w-full object-contain" />
+                        </div>
+
+                        <h1 class="text-xl mt-3 dark:text-text-light font-semibold">ZERO-G Space Duel Warfare</h1>
+
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-3 py-1 text-sm font-medium rounded-full border border-primary text-primary bg-primary/10"> Python </span>
+
+                            <span class="px-3 py-1 text-sm font-medium rounded-full border border-primary text-primary bg-primary/10"> Pygame </span>
+                        </div>
+
+                        <p class="mt-2 text-justify">Battle in space, dodge incoming bullets, and outsmart your opponent.</p>
+                    </a>
+
+                    <a
+                        href="https://iguzum.itch.io/gear-5-overtake"
+                        class="p-4 flex flex-col gap-3 bg-card border border-border-light rounded-2xl transform hover:-translate-y-2 transition-all duration-200 hover:shadow-lg dark:border-border-light dark:bg-card-dark"
+                    >
+                        <div class="flex h-56 items-center justify-center overflow-hidden rounded-md">
+                            <img src="assets/pictures/mockups/gear_5.jpg" alt="Project 2" class="h-full w-full object-contain" />
+                        </div>
+                        <h1 class="text-xl mt-3 dark:text-text-light font-semibold">Gear 5 Overtake</h1>
+
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-3 py-1 text-sm font-medium rounded-full border border-primary text-primary bg-primary/10"> Python </span>
+
+                            <span class="px-3 py-1 text-sm font-medium rounded-full border border-primary text-primary bg-primary/10"> Pygame </span>
+                        </div>
+
+                        <p class="mt-2 text-justify">A car game where you dodge incoming cars and survive as long as possible.</p>
+                    </a>
+
+                    <a
+                        href="blank_page.html"
+                        class="p-4 flex flex-col gap-3 bg-card border border-border-light rounded-2xl transform hover:-translate-y-2 transition-all duration-200 hover:shadow-lg dark:border-border-light dark:bg-card-dark justify-between"
+                    >
+                        <div class="flex h-56 items-center justify-center overflow-hidden rounded-md">
+                            <img src="assets/pictures/mockups/flash_cards.png" alt="Project 3" class="h-full w-full object-contain" />
+                        </div>
+
+                        <h1 class="text-xl mt-3 dark:text-text-light font-semibold">Flash Cards</h1>
+
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-3 py-1 text-sm font-medium rounded-full border border-primary text-primary bg-primary/10"> HTML </span>
+                            <span class="px-3 py-1 text-sm font-medium rounded-full border border-primary text-primary bg-primary/10"> CSS </span>
+                            <span class="px-3 py-1 text-sm font-medium rounded-full border border-primary text-primary bg-primary/10">
+                                JAVASCRIPT
+                            </span>
+                        </div>
+
+                        <p class="mt-2 text-justify">A flashcard app that generates questions and lets users create their own flashcards.</p>
+                    </a>
+
+                    <a
+                        href="https://iguzum.github.io/Beta-Byte/"
+                        class="p-4 flex flex-col gap-3 bg-card border border-border-light rounded-2xl transform hover:-translate-y-2 transition-all duration-200 hover:shadow-lg cursor-pointer dark:border-border-light dark:bg-card-dark"
+                    >
+                        <div class="flex h-56 items-center justify-center overflow-hidden rounded-md">
+                            <img src="assets/pictures/mockups/beta_byte.png" alt="Project 4" class="h-full w-full object-contain" />
+                        </div>
+
+                        <h1 class="text-xl mt-3 dark:text-text-light font-semibold">Beta Byte</h1>
+
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-3 py-1 text-sm font-medium rounded-full border border-primary text-primary bg-primary/10"> HTML </span>
+                            <span class="px-3 py-1 text-sm font-medium rounded-full border border-primary text-primary bg-primary/10"> CSS </span>
+                            <span class="px-3 py-1 text-sm font-medium rounded-full border border-primary text-primary bg-primary/10">
+                                JAVASCRIPT
+                            </span>
+                        </div>
+
+                        <p class="mt-2 text-justify">A simple e-commerce website that mimics basic online shopping features.</p>
+                    </a>
+
+                    <a
+                        href="blank_page.html"
+                        class="p-4 flex flex-col gap-3 bg-card border border-border-light rounded-2xl transform hover:-translate-y-2 transition-all duration-200 hover:shadow-lg dark:border-border-light dark:bg-card-dark"
+                    >
+                        <div class="flex h-56 items-center justify-center overflow-hidden rounded-md">
+                            <img src="assets/pictures/mockups/core_os.png" alt="Project 5" class="h-full w-full object-contain" />
+                        </div>
+
+                        <h1 class="text-xl mt-3 dark:text-text-light font-semibold">Core OS</h1>
+
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-3 py-1 text-sm font-medium rounded-full border border-primary text-primary bg-primary/10"> HTML </span>
+
+                            <span class="px-3 py-1 text-sm font-medium rounded-full border border-primary text-primary bg-primary/10">
+                                TAILWIND
+                            </span>
+                        </div>
+
+                        <p class="mt-2 text-justify">A simple space-themed website focused on clean and modern design.</p>
+                    </a>
+
+                    <a
+                        href="blank_page.html"
+                        class="p-4 flex flex-col gap-3 bg-card border border-border-light rounded-2xl transform hover:-translate-y-2 transition-all duration-200 hover:shadow-lg dark:border-border-light dark:bg-card-dark"
+                    >
+                        <div class="flex h-56 items-center justify-center overflow-hidden rounded-md">
+                            <img src="assets/pictures/mockups/portfolio.png" alt="Project 6" class="h-full w-full object-contain" />
+                        </div>
+
+                        <h1 class="text-xl mt-3 dark:text-text-light font-semibold">My Portfolio</h1>
+
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-3 py-1 text-sm font-medium rounded-full border border-primary text-primary bg-primary/10"> HTML </span>
+
+                            <span class="px-3 py-1 text-sm font-medium rounded-full border border-primary text-primary bg-primary/10">
+                                TAILWIND
+                            </span>
+
+                            <span class="px-3 py-1 text-sm font-medium rounded-full border border-primary text-primary bg-primary/10">
+                                JAVASCRIPT
+                            </span>
+                        </div>
+
+                        <p class="mt-2 text-justify">A simple portfolio showcasing my skills, projects, and experience as a student.</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- TOOLS SECTION START -->
+            <section id="tools" class="mt-30 flex w-full flex-col px-3 gap-10 scroll-mt-30 lg:mt-45 dark:text-text-dark">
+                <div class="flex flex-col">
+                    <span class="text-primary font-bold text-lg">04. TECH STACKS</span>
+                    <h1 class="text-3xl lg:text-6xl font-bold mt-3 dark:text-text-light">Tools & Technologies</h1>
+
+                    <p class="text-justify mt-4 lg:max-w-[40%]">
+                        Here are some of the projects I’ve worked on, showcasing my web development and design skills.
+                    </p>
+                </div>
+
+                <div
+                    class="relative w-full overflow-hidden bg-background-marquee py-2 dark:bg-card-dark border-2 mask-[linear-gradient(to_right,transparent,white_20%,white_80%,transparent)] dark:mask-[linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]"
+                >
+                    <div class="flex items-center justify-center gap-4 lg:gap-8 animate-marquee whitespace-nowrap z-1000 w-fit">
+                        <!-- ORIGINAL COPY -->
+                        <div class="w-full flex justify-around items-center gap-5 lg:gap-8">
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-html5-plain-wordmark colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-css3-plain-wordmark colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-javascript-plain colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-tailwindcss-plain colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-python-plain-wordmark colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-php-plain colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-java-plain-wordmark colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-csharp-plain colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-azuresqldatabase-plain colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-vercel-original-wordmark text-black dark:text-text-dark"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-git-plain-wordmark colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-github-original text-black dark:text-text-dark"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-vscode-plain-wordmark colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-figma-plain colored"></i>
+                            </span>
+                        </div>
+                        <!-- ORIGINAL COPY END -->
+
+                        <!-- DUPLICATE COPY START -->
+                        <div class="w-full flex justify-around items-center gap-5 lg:gap-8" aria-hidden="true">
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-html5-plain-wordmark colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-css3-plain-wordmark colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-javascript-plain colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-tailwindcss-plain colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-python-plain-wordmark colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-php-plain colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-java-plain-wordmark colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-csharp-plain colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-azuresqldatabase-plain colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-vercel-original-wordmark colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-git-plain-wordmark colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-github-original-wordmark colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-vscode-plain-wordmark colored"></i>
+                            </span>
+                            <span class="text-xl md:text-3xl lg:text-5xl">
+                                <i class="devicon-figma-plain colored"></i>
+                            </span>
+                        </div>
+                        <!-- DUPLICATE COPY END -->
+                    </div>
+                </div>
+
+                <div class="flex w-full flex-col gap-4 lg:flex-row">
+                    <!-- LEFT: Expertise + Tools -->
+                    <div class="flex w-full flex-col gap-3 p-5 md:w-full">
+                        <!-- EXPERTISE -->
+                        <h1 class="text-2xl font-bold">EXPERTISE</h1>
+
+                        <div class="grid grid-cols-5 gap-10 mt-2">
+                            <div class="flex flex-col items-center justify-center gap-1 transition-all duration-200 hover:scale-110">
+                                <i class="devicon-html5-plain-wordmark colored text-5xl"></i>
+                                <p class="text-sm">HTML</p>
+                            </div>
+
+                            <div class="flex flex-col items-center justify-center gap-1 transition-all duration-200 hover:scale-110">
+                                <i class="devicon-css3-plain-wordmark colored text-5xl"></i>
+                                <p class="text-sm">CSS</p>
+                            </div>
+
+                            <div class="flex flex-col items-center justify-center gap-1 transition-all duration-200 hover:scale-110">
+                                <i class="devicon-tailwindcss-original colored text-5xl"></i>
+                                <p class="text-sm">Tailwind</p>
+                            </div>
+                        </div>
+
+                        <!-- TOOLS -->
+                        <h1 class="mt-4 text-2xl font-bold">TOOLS</h1>
+                        <div class="grid grid-cols-3 gap-10 sm:grid-cols-3 lg:grid-cols-5 mt-2">
+                            <div class="flex flex-col items-center justify-center gap-1 transition-all duration-200 hover:scale-110">
+                                <i class="devicon-javascript-plain colored text-5xl"></i>
+
+                                <p class="text-sm">JavaScript</p>
+                            </div>
+
+                            <div class="flex flex-col items-center justify-center gap-1 transition-all duration-200 hover:scale-110">
+                                <i class="devicon-python-plain-wordmark colored text-5xl"></i>
+                                <p class="text-sm">Python</p>
+                            </div>
+
+                            <div class="flex flex-col items-center justify-center gap-1 transition-all duration-200 hover:scale-110">
+                                <i class="devicon-java-plain-wordmark colored text-5xl"></i>
+                                <p class="text-sm">Java</p>
+                            </div>
+
+                            <div class="flex flex-col items-center justify-center gap-1 transition-all duration-200 hover:scale-110">
+                                <i class="devicon-php-plain colored text-5xl"></i>
+                                <p class="text-sm">PHP</p>
+                            </div>
+
+                            <div class="flex flex-col items-center justify-center gap-1 transition-all duration-200 hover:scale-110">
+                                <span>
+                                    <i class="devicon-csharp-plain colored text-5xl"></i>
+                                </span>
+                                <p class="text-sm">C#</p>
+                            </div>
+
+                            <div class="flex flex-col items-center justify-center gap-1 transition-all duration-200 hover:scale-110">
+                                <i class="devicon-azuresqldatabase-plain colored text-5xl"></i>
+
+                                <p class="text-sm">SQL</p>
+                            </div>
+                        </div>
+                        <h1 class="mt-4 text-2xl font-bold">OTHERS</h1>
+
+                        <div class="grid grid-cols-3 gap-x-10 gap-y-2 lg:grid-cols-5 mt-2">
+                            <div class="flex flex-col items-center justify-center gap-1 transition-all duration-200 hover:scale-110">
+                                <i class="devicon-figma-plain colored text-5xl"></i>
+                                <p class="text-sm">Figma</p>
+                            </div>
+
+                            <div class="flex flex-col items-center justify-center gap-1 transition-all duration-200 hover:scale-110">
+                                <i class="devicon-git-plain-wordmark colored text-5xl"></i>
+                                <p class="text-sm">Git</p>
+                            </div>
+
+                            <div class="flex flex-col items-center justify-center gap-1 transition-all duration-200 hover:scale-110">
+                                <i class="devicon-github-original text-black dark:text-text-dark text-5xl"></i>
+                                <p class="text-sm">GitHub</p>
+                            </div>
+
+                            <div class="flex flex-col items-center justify-center gap-1 transition-all duration-200 hover:scale-110">
+                                <i class="devicon-vercel-plain-wordmark text-black dark:text-text-dark text-5xl"></i>
+                                <p class="text-sm">Vercel</p>
+                            </div>
+
+                            <div class="flex flex-col items-center justify-center gap-1 transition-all duration-200 hover:scale-110">
+                                <i class="devicon-vscode-plain colored text-5xl"></i>
+                                <p class="text-sm">VS Code</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: Illustration -->
+                    <div class="flex w-full items-center justify-center">
+                        <img src="assets/pictures/illustrator.png" alt="Illustration" class="h-auto w-full max-w-150 rounded-2xl object-contain" />
+                    </div>
+                </div>
+            </section>
+            <!-- TOOLS SECTION END -->
+
+            <!-- CONTACT SECTION START -->
+            <section
+                id="contact"
+                class="w-full flex justify-around items-center min-h-screen dark:text-text-light px-3 mt-30 lg:mt-0 flex-col md:flex-row gap-10 lg:gap-20 scroll-mt-30 lg:scroll-mt-0"
+            >
+                <!-- Section heading -->
+                <div class="flex flex-col">
+                    <span class="text-primary font-bold text-lg">05. CONTACT</span>
+
+                    <h1 class="text-3xl lg:text-6xl font-bold mt-3">Get In Touch</h1>
+
+                    <p class="text-justify mt-4 max-w-xl text-text-muted dark:text-text-dark">
+                        Have a project in mind or want to work together? Feel free to send me a message and I'll get back to you.
+                    </p>
+
+                    <div class="mt-10 flex flex-col gap-3">
+                        <h2 class="text-2xl font-bold">Let's talk.</h2>
+
+                        <p class="max-w-md text-text-muted dark:text-text-dark">
+                            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your team.
+                        </p>
+                    </div>
+
+                    <!-- Contact information -->
+                    <div class="flex flex-col justify-center gap-8 mt-10">
+                        <!-- Email -->
+                        <div class="flex items-center gap-4">
+                            <div class="flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                                <i class="ri-mail-send-line text-lg lg:text-2xl"></i>
+                            </div>
+
+                            <div>
+                                <p class="text-sm text-text-muted dark:text-text-dark">Email</p>
+                                <p class="font-medium">Capindingmarkjay@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center gap-4">
+                            <div class="flex size-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                                <i class="ri-map-pin-2-line text-lg lg:text-2xl"></i>
+                            </div>
+
+                            <div>
+                                <p class="text-sm text-text-muted dark:text-text-dark">Location</p>
+                                <p class="font-medium">Philippines</p>
+                            </div>
+                        </div>
+
+                        <!-- Socials -->
+                        <div class="flex flex-col items-start gap-3 mt-5">
+                            <h2 class="text-2xl font-bold">Socials</h2>
+                            <div class="flex items-center gap-2 lg:gap-5">
+                                <div>
+                                    <a
+                                        href="https://github.com/iguzum"
+                                        class="text-3xl lg:text-4xl text-text-muted hover:text-text-muted/70 transition-all duration-200"
+                                    >
+                                        <i class="ri-github-fill"></i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a
+                                        href="https://www.facebook.com/share/1H9jNN1SyD/"
+                                        class="text-3xl lg:text-4xl text-text-muted hover:text-primary transition-all duration-200"
+                                    >
+                                        <i class="ri-facebook-circle-fill"></i>
+                                    </a>
+                                </div>
+
+                                <div>
+                                    <a
+                                        href="https://www.instagram.com/m4rkjizyy?stkn=MW8ybHJhbjA3dTgybA=="
+                                        class="text-3xl lg:text-4xl text-text-muted hover:text-orange-600 transition-all duration-200"
+                                    >
+                                        <i class="ri-instagram-fill"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact form -->
+                <form
+                    id="contactForm"
+                    class="dark:border-border-light dark:bg-card-dark flex w-full lg:max-w-[40%] flex-col gap-5 rounded-2xl border border-border-light bg-card p-6 lg:p-8 dark:text-text-dark"
+                >
+                    <!-- Name -->
+                    <div class="flex flex-col gap-2">
+                        <label for="name" class="text-sm font-medium"> Name </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                            required
+                            class="w-full rounded-xl border border-border-light bg-background dark:bg-input-light px-4 py-3 outline-none transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20 dark:focus:ring-primary/50"
+                        />
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex flex-col gap-2">
+                        <label for="email" class="text-sm font-medium"> Email </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="your@email.com"
+                            required
+                            class="w-full rounded-xl border border-border-light bg-background dark:bg-input-light px-4 py-3 outline-none transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20 dark:focus:ring-primary/50"
+                        />
+                    </div>
+
+                    <!-- Message -->
+                    <div class="flex flex-col gap-2">
+                        <label for="message" class="text-sm font-medium"> Message </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="Write your message..."
+                            required
+                            class="w-full resize-none rounded-xl border border-border-light bg-background dark:bg-input-light px-4 py-3 outline-none transition-all duration-200 focus:border-primary focus:ring-2 focus:ring-primary/20 dark:focus:ring-primary/50"
+                        ></textarea>
+                    </div>
+
+                    <!-- Submit -->
+                    <button
+                        type="submit"
+                        id="submitBtn"
+                        class="cursor-pointer mt-1 flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 font-medium text-text-light transition-all duration-200 hover:bg-primary-active hover:scale-[1.02]"
+                    >
+                        Send Message
+                        <i class="ri-send-ins-line text-md"></i>
+                    </button>
+                </form>
+            </section>
+            <!-- CONTACT SECTION END -->
+
+            <footer
+                class="flex w-full flex-col items-center justify-center gap-2 border-t border-border-light py-5 text-sm text-text-muted mt-15 md:mt-0"
+            >
+                <p>© 2026 Mark Jay Capinding. All rights reserved.</p>
+
+                <p>
+                    Designed and built by me using
+                    <a
+                        href="https://tailwindcss.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="font-medium hover:underline cursor-pointer text-primary"
+                        >Tailwind CSS</a
+                    >
+                </p>
+            </footer>
+        </div>
+
+        <script src="main.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    </body>
+</html>
